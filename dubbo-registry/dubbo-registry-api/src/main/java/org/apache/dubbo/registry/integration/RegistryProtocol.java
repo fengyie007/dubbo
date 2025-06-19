@@ -1078,8 +1078,9 @@ public class RegistryProtocol implements Protocol, ScopeModelAware {
                                         .getProtocol()
                                         .equals(getRegisterUrl().getProtocol()))
                         .forEach(u -> u.setRegistered(true));
-                logger.info("Registered dubbo service " + getRegisterUrl().getServiceKey() + " url " + getRegisterUrl()
-                        + " to registry " + registryUrl);
+                logger.info("[INSTANCE_REGISTER] Registered dubbo service "
+                        + getRegisterUrl().getServiceKey() + " url " + getRegisterUrl() + " to registry "
+                        + registryUrl);
             }
         }
 
